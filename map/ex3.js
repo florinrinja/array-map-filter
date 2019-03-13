@@ -27,6 +27,7 @@ Exemple d'entrée:
     {
       name: 'Leave No Trace',
       rating: 100
+    
     },
     {
       name: 'White Boy Rick',
@@ -59,7 +60,24 @@ En sortie:
 
  */
 
-function getMoviesFreshness(movies) {
+// const getMoviesFreshness = (films) => films.map(valeur => (valeur.rating<60) ? film.label="rotten" : (valeur.rating>=60)&&(valeur.rating<=75) ? film.label="fresh": (valeur.rating>75) ? film.label="certified fresh":false)
+
+function getMoviesFreshness(films) {
+  return films.map(film => {
+  
+     if (film.rating < 60){
+      film.label="rotten";
+      return film;
+        }else if((film.rating>=60)&&(film.rating<=75)){
+      film.label="fresh";
+      return film;
+        }else if(film.rating>75){
+      film.label="certified fresh";
+      return film;
+}
+
+  });
+
 }
 
 

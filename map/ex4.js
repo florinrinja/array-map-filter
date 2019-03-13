@@ -52,7 +52,21 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
 */
 
 function getCirclesProperties(radiuses) {
-}
+  return radiuses.map(rad => {
+    const circle= {
+      radius:rad,
+      circumference:2*rad*Math.PI,
+      surface:Math.PI*rad*rad,
+    };
+    
+    return circle;
+  });
+    
+  }
+
+
+
+
 
 
 

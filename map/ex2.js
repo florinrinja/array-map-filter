@@ -42,8 +42,14 @@ En sortie: [
 
  */
 
-function getFoodCategories(foods) {
-}
+// function getFoodCategories(foods) {
+//   let raspuns = foods.map(({ isVegetarian }) => isVegetarian)
+//   let vegOk= raspuns.map(x => false? '':  'not');
+//   console.log(raspuns);
+//   // return foods.map(x => `${x.food} is ${vegOk} suitable for vegetarians`)
+// }
+
+const getFoodCategories = foods => foods.map(food => food.isVegetarian ? `${food.food} is suitable for vegetarians` : `${food.food} is not suitable for vegetarians`)
 
 
 
